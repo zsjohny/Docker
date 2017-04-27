@@ -1,4 +1,8 @@
 #/bin/bash
+
+#How do I fix a “Problem with MergeList” or “status file could not be parsed” error when trying to do an update?
+# sudo rm -vf /var/lib/apt/lists/*
+
 sudo apt-get update
 
 sudo apt-get install -y linux-image-extra-$(uname -r) linux-image-extra-virtual
