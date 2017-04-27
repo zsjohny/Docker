@@ -1,7 +1,8 @@
 #/bin/bash
 
-#How do I fix a “Problem with MergeList” or “status file could not be parsed” error when trying to do an update?
+# How do I fix a “Problem with MergeList” or “status file could not be parsed” error when trying to do an update?
 # sudo rm -vf /var/lib/apt/lists/*
+# fix miss depend https://askubuntu.com/questions/140246/how-do-i-resolve-unmet-dependencies-after-adding-a-ppa
 
 sudo apt-get update
 
