@@ -3,8 +3,9 @@ http://dockone.io/article/826
 
 https://htmlpreview.github.io/?https://github.com/redhat-developer/docker-java/blob/javaone2015/readme.html#Common_Docker_Commands
 
-镜像类
+## 镜像类
 
+```
 docker build --rm=true . 构建镜像
 docker pull ${IMAGE} 安装镜像
 docker images 显示已经安装的镜像
@@ -13,7 +14,11 @@ docker rmi ${IMAGE_ID} 删除指定镜像
 docker rmi $(docker images | grep “^” | awk “{print $3}”) 删除所有没有标签的镜像
 docker rm $(docker ps -aq) 删除所有的镜像
 docker rmi $(docker images --quiet --filter &quot;dangling=true&quot;) 删除未使用的镜像
-容器类
+```
+
+## 容器类
+
+```
 docker run 运行容器
 docker ps 显示正在运行的容器
 docker ps -a 显示所有的容器
@@ -28,3 +33,4 @@ docker inspect --format '{{ .NetworkSettings.IPAddress }}' ${CID} 显示指定�
 docker attach ${CID} 进入容器
 docker exec -it ${CID} bash 进入容器打开一个shell
 docker ps | grep wildfly | awk '{print $1}' 通过正则表达式查找容器的镜像ID
+```
